@@ -363,9 +363,10 @@ export default function App() {
       <section id="pricing" className="border-t border-surface-border bg-surface/50">
         <div className="mx-auto max-w-[1200px] px-4 py-16 md:px-6 md:py-24">
           <h2 className="text-center text-3xl font-semibold tracking-tight md:text-4xl">Simple pricing</h2>
-          <p className="mt-4 text-center text-text-secondary">Spend $15, save $144/mo. No subscriptions required.</p>
+          <p className="mt-4 text-center text-text-secondary">Spend $15, save $144/mo. Add monthly updates to stay ahead.</p>
 
-          <div className="mt-12 mx-auto max-w-sm">
+          <div className="mt-12 mx-auto max-w-3xl grid gap-6 md:grid-cols-2">
+            {/* One-Time Report */}
             <div className="rounded-xl border border-ember bg-surface p-8 text-center shadow-[0_0_40px_rgba(249,115,22,0.08)]">
               <p className="text-sm font-semibold uppercase tracking-wider text-ember">One Report</p>
               <div className="mt-3 text-5xl font-bold">$14.99</div>
@@ -373,7 +374,7 @@ export default function App() {
               <ul className="mt-6 space-y-3 text-left text-sm">
                 {[
                   '20 vision models tested',
-                  '50 runs per model for statistical significance',
+                  '50 runs per model (1,000 total)',
                   'Exact-match accuracy scoring',
                   'P95/P99 latency data',
                   'Error analysis — see where models fail',
@@ -390,10 +391,35 @@ export default function App() {
                 Run a Benchmark <ArrowRight size={18} />
               </a>
             </div>
-            <p className="mt-6 text-center text-sm text-text-muted">
-              Coming soon: $29/mo for monthly re-benchmarking
-            </p>
+
+            {/* Monthly Updates */}
+            <div className="rounded-xl border border-surface-border bg-surface p-8 text-center">
+              <p className="text-sm font-semibold uppercase tracking-wider text-text-muted">Monthly Updates</p>
+              <div className="mt-3 text-5xl font-bold">+$7.50<span className="text-lg font-medium text-text-muted">/mo</span></div>
+              <p className="mt-2 text-sm text-text-muted">after initial report</p>
+              <ul className="mt-6 space-y-3 text-left text-sm">
+                {[
+                  'New models tested automatically on release',
+                  'Email updates showing how they stack up',
+                  'Your report grows over time',
+                  'Historical performance tracking',
+                  'Cancel anytime',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle size={16} className="mt-0.5 shrink-0 text-success" />
+                    <span className="text-text-secondary">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href="#cta" className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-ember px-6 py-3.5 text-base font-semibold text-ember hover:bg-ember/10 transition-colors">
+                Add Monthly Updates <ArrowRight size={18} />
+              </a>
+              <p className="mt-3 text-xs text-text-muted">Requires initial $14.99 report</p>
+            </div>
           </div>
+          <p className="mt-8 text-center text-sm text-text-muted">
+            Both plans include a money-back guarantee
+          </p>
         </div>
       </section>
 
@@ -436,7 +462,8 @@ export default function App() {
           <a href="#" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-ember px-8 py-4 text-lg font-semibold text-white hover:bg-orange-600 transition-colors shadow-lg shadow-ember/20">
             Run a Benchmark — $14.99 <ArrowRight size={20} />
           </a>
-          <p className="mt-6 text-sm text-text-muted">20 vision models · 50 runs each · exact-match accuracy</p>
+          <p className="mt-4 text-sm text-text-muted">Add monthly updates for $7.50/mo</p>
+          <p className="mt-2 text-sm text-text-muted">20 vision models · 50 runs each · exact-match accuracy</p>
         </div>
       </section>
 
