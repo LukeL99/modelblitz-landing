@@ -18,24 +18,24 @@ const TEXT_MUTED = '#71717A'
 const SUCCESS = '#22C55E'
 
 const MODELS_DATA = [
-  { name: 'Claude 3.5 Sonnet', provider: 'Anthropic', accuracy: 96, latency: 1.8, cost: '$0.0045', score: 94.2 },
-  { name: 'GPT-4o', provider: 'OpenAI', accuracy: 97, latency: 2.1, cost: '$0.0089', score: 89.1 },
-  { name: 'Gemini 2.0 Pro', provider: 'Google', accuracy: 93, latency: 1.4, cost: '$0.0038', score: 88.7 },
-  { name: 'DeepSeek V3', provider: 'DeepSeek', accuracy: 92, latency: 2.8, cost: '$0.0014', score: 87.3 },
-  { name: 'Claude 3.5 Haiku', provider: 'Anthropic', accuracy: 88, latency: 0.6, cost: '$0.0008', score: 86.1 },
-  { name: 'Mistral Large', provider: 'Mistral', accuracy: 90, latency: 1.9, cost: '$0.0036', score: 84.5 },
-  { name: 'GPT-4o-mini', provider: 'OpenAI', accuracy: 87, latency: 0.9, cost: '$0.0006', score: 83.9 },
-  { name: 'Qwen 2.5 72B', provider: 'Alibaba', accuracy: 89, latency: 2.4, cost: '$0.0018', score: 82.1 },
-  { name: 'Gemini 2.0 Flash', provider: 'Google', accuracy: 84, latency: 0.5, cost: '$0.0003', score: 81.4 },
-  { name: 'Llama 3.3 70B', provider: 'Meta', accuracy: 86, latency: 1.7, cost: '$0.0012', score: 80.2 },
+  { name: 'Claude Sonnet 4.5', provider: 'Anthropic', accuracy: 96, latency: 1.6, cost: '$0.0045', score: 94.2 },
+  { name: 'GPT-4o', provider: 'OpenAI', accuracy: 95, latency: 1.8, cost: '$0.0075', score: 89.1 },
+  { name: 'Gemini 3 Pro', provider: 'Google', accuracy: 94, latency: 1.2, cost: '$0.0042', score: 88.7 },
+  { name: 'DeepSeek V3', provider: 'DeepSeek', accuracy: 92, latency: 2.4, cost: '$0.0014', score: 87.3 },
+  { name: 'Claude Haiku 4.5', provider: 'Anthropic', accuracy: 89, latency: 0.5, cost: '$0.0012', score: 86.1 },
+  { name: 'Mistral Large 2', provider: 'Mistral', accuracy: 90, latency: 1.7, cost: '$0.0036', score: 84.5 },
+  { name: 'GPT-4o Mini', provider: 'OpenAI', accuracy: 87, latency: 0.7, cost: '$0.0005', score: 83.9 },
+  { name: 'Qwen 3 72B', provider: 'Alibaba', accuracy: 90, latency: 2.1, cost: '$0.0016', score: 82.1 },
+  { name: 'Gemini 3 Flash', provider: 'Google', accuracy: 86, latency: 0.4, cost: '$0.0002', score: 81.4 },
+  { name: 'Llama 4 70B', provider: 'Meta', accuracy: 87, latency: 1.5, cost: '$0.0010', score: 80.2 },
 ]
 
 const ALL_MODELS = [
-  'GPT-4.5', 'GPT-4o', 'GPT-4o-mini', 'Claude 3 Opus', 'Claude 3.5 Sonnet',
-  'Claude 3.5 Haiku', 'Gemini Ultra', 'Gemini Pro', 'Gemini Flash',
-  'DeepSeek R1', 'DeepSeek V3', 'Mistral Large', 'Mistral Small',
-  'Llama 3.3 70B', 'Llama 3.3 8B', 'Command R+', 'Qwen 2.5 72B',
-  'Mixtral 8x22B', 'Gemma 2 27B', 'Phi-3 Medium',
+  'GPT-5.2', 'GPT-4o', 'GPT-4o Mini', 'Claude Opus 4.6', 'Claude Sonnet 4.5',
+  'Claude Haiku 4.5', 'Gemini 3 Pro', 'Gemini 3 Flash', 'Gemini 3 Flash 8B',
+  'DeepSeek R1', 'DeepSeek V3', 'Mistral Large 2', 'Mistral Small',
+  'Llama 4 405B', 'Llama 4 70B', 'Llama 4 8B', 'Command R+', 'Qwen 3 72B',
+  'Phi-4', 'Nova Micro',
 ]
 
 // Scene 1: Input (frames 0-90)
@@ -281,7 +281,7 @@ function ResultsScene() {
             🏆 RECOMMENDED
           </div>
           <div style={{ fontSize: 22, fontWeight: 700, color: TEXT, marginTop: 4 }}>
-            Claude 3.5 Sonnet
+            Claude Sonnet 4.5
           </div>
         </div>
         <div style={{ display: 'flex', gap: 24, fontSize: 14 }}>
@@ -293,7 +293,7 @@ function ResultsScene() {
           </div>
           <div style={{ textAlign: 'center' as const }}>
             <div style={{ color: TEXT_MUTED, fontSize: 11, fontWeight: 600, textTransform: 'uppercase' as const }}>Speed</div>
-            <div style={{ color: TEXT, fontWeight: 700, fontSize: 20, fontFamily: 'JetBrains Mono, monospace' }}>1.8s</div>
+            <div style={{ color: TEXT, fontWeight: 700, fontSize: 20, fontFamily: 'JetBrains Mono, monospace' }}>1.6s</div>
           </div>
           <div style={{ textAlign: 'center' as const }}>
             <div style={{ color: TEXT_MUTED, fontSize: 11, fontWeight: 600, textTransform: 'uppercase' as const }}>Cost</div>
@@ -395,7 +395,7 @@ function ResultsScene() {
         alignItems: 'center',
         gap: 8,
       }}>
-        💰 Switch from GPT-4o → save <strong style={{ fontWeight: 700 }}>$132/mo</strong> at 1,000 queries/day
+        💰 Switch from GPT-4o → save <strong style={{ fontWeight: 700 }}>$90/mo</strong> at 1,000 queries/day
       </div>
     </AbsoluteFill>
   )

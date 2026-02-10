@@ -5,11 +5,11 @@ import {
 } from 'lucide-react'
 
 const MODELS = [
-  { rank: 1, model: 'Claude 3.5 Sonnet', provider: 'Anthropic', accuracy: 96, speed: '1.8s', cost: '$0.0045', score: 94.2, winner: true },
-  { rank: 2, model: 'GPT-4o', provider: 'OpenAI', accuracy: 97, speed: '2.1s', cost: '$0.0089', score: 89.1, winner: false },
-  { rank: 3, model: 'Gemini 2.0 Pro', provider: 'Google', accuracy: 93, speed: '1.4s', cost: '$0.0038', score: 88.7, winner: false },
-  { rank: 4, model: 'DeepSeek V3', provider: 'DeepSeek', accuracy: 92, speed: '2.8s', cost: '$0.0014', score: 87.3, winner: false },
-  { rank: 5, model: 'Claude 3.5 Haiku', provider: 'Anthropic', accuracy: 88, speed: '0.6s', cost: '$0.0008', score: 86.1, winner: false },
+  { rank: 1, model: 'Claude Sonnet 4.5', provider: 'Anthropic', accuracy: 96, speed: '1.6s', cost: '$0.0045', score: 94.2, winner: true },
+  { rank: 2, model: 'GPT-4o', provider: 'OpenAI', accuracy: 95, speed: '1.8s', cost: '$0.0075', score: 89.1, winner: false },
+  { rank: 3, model: 'Gemini 3 Pro', provider: 'Google', accuracy: 94, speed: '1.2s', cost: '$0.0042', score: 88.7, winner: false },
+  { rank: 4, model: 'DeepSeek V3', provider: 'DeepSeek', accuracy: 92, speed: '2.4s', cost: '$0.0014', score: 87.3, winner: false },
+  { rank: 5, model: 'Claude Haiku 4.5', provider: 'Anthropic', accuracy: 89, speed: '0.5s', cost: '$0.0012', score: 86.1, winner: false },
 ]
 
 const FAQS = [
@@ -174,18 +174,18 @@ export default function App() {
             <div className="flex items-center gap-2 text-sm font-semibold text-ember uppercase tracking-wider">
               <Trophy size={16} /> Our Recommendation
             </div>
-            <h3 className="mt-3 text-2xl font-semibold">Claude 3.5 Sonnet</h3>
+            <h3 className="mt-3 text-2xl font-semibold">Claude Sonnet 4.5</h3>
             <div className="mt-4 flex flex-wrap gap-4 text-sm">
               <span className="flex items-center gap-1.5"><Target size={14} className="text-success" /> 96/100 accuracy</span>
-              <span className="flex items-center gap-1.5"><Zap size={14} className="text-ember-light" /> 1.8s latency</span>
+              <span className="flex items-center gap-1.5"><Zap size={14} className="text-ember-light" /> 1.6s latency</span>
               <span className="flex items-center gap-1.5"><DollarSign size={14} className="text-success" /> $0.0045/query</span>
             </div>
             <p className="mt-4 text-text-secondary leading-relaxed">
-              For this JSON extraction prompt, Claude 3.5 Sonnet offers the best balance of accuracy and cost. It scores 96% at less than half the cost of GPT-4o.
+              For this JSON extraction prompt, Claude Sonnet 4.5 offers the best balance of accuracy and cost. It scores 96% at less than half the cost of GPT-4o.
             </p>
             <div className="mt-4 flex items-center gap-2 rounded-lg bg-success/10 px-3 py-2 text-sm text-success">
               <DollarSign size={16} />
-              <span>Switch from GPT-4o → save <strong>$132/mo</strong> at 1,000 queries/day</span>
+              <span>Switch from GPT-4o → save <strong>$90/mo</strong> at 1,000 queries/day</span>
             </div>
           </div>
 
@@ -250,14 +250,14 @@ export default function App() {
           <h2 className="text-center text-3xl font-semibold tracking-tight md:text-4xl">20+ models tested</h2>
           <p className="mt-4 text-center text-text-secondary">Every price tier — from $0.0001 to $0.06 per 1K tokens</p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            {['OpenAI', 'Anthropic', 'Google', 'Meta', 'Mistral', 'DeepSeek', 'Cohere', 'Alibaba', 'Microsoft'].map((p) => (
+            {['OpenAI', 'Anthropic', 'Google', 'Meta', 'Mistral', 'DeepSeek', 'Cohere', 'Alibaba', 'Microsoft', 'Amazon'].map((p) => (
               <div key={p} className="rounded-full border border-surface-border bg-surface px-5 py-2.5 text-sm font-medium text-text-secondary">
                 {p}
               </div>
             ))}
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2 text-xs text-text-muted">
-            {['GPT-4.5', 'GPT-4o', 'GPT-4o-mini', 'Claude 3 Opus', 'Claude 3.5 Sonnet', 'Claude 3.5 Haiku', 'Gemini 2.0 Ultra', 'Gemini 2.0 Pro', 'Gemini 2.0 Flash', 'DeepSeek R1', 'DeepSeek V3', 'Mistral Large', 'Mistral Small', 'Llama 3.3 70B', 'Llama 3.3 8B', 'Command R+', 'Qwen 2.5 72B', 'Mixtral 8x22B', 'Gemma 2 27B', 'Phi-3 Medium'].map((m) => (
+            {['GPT-5.2', 'GPT-4o', 'GPT-4o Mini', 'Claude Opus 4.6', 'Claude Sonnet 4.5', 'Claude Haiku 4.5', 'Gemini 3 Pro', 'Gemini 3 Flash', 'Gemini 3 Flash 8B', 'DeepSeek R1', 'DeepSeek V3', 'Mistral Large 2', 'Mistral Small', 'Llama 4 405B', 'Llama 4 70B', 'Llama 4 8B', 'Command R+', 'Qwen 3 72B', 'Phi-4', 'Nova Micro'].map((m) => (
               <span key={m} className="rounded-md bg-surface-raised px-2 py-1">{m}</span>
             ))}
           </div>
