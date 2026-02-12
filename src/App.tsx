@@ -133,7 +133,7 @@ export default function App() {
       <nav className="sticky top-0 z-50 border-b border-surface-border/50 bg-void/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-4 md:px-6">
           <a href="#" className="text-xl font-bold tracking-tight">
-            <span className="text-ember">Model</span>Pick
+            <span className="text-ember">Model</span>Blitz
           </a>
           <div className="hidden items-center gap-6 md:flex">
             <a href="#how" className="text-sm text-text-secondary hover:text-text-primary transition-colors">How it Works</a>
@@ -188,7 +188,7 @@ export default function App() {
                 <div className="w-3 h-3 rounded-full bg-[#FF5F57]" />
                 <div className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
                 <div className="w-3 h-3 rounded-full bg-[#28C840]" />
-                <span className="ml-3 text-xs text-text-muted font-mono">modelpick.ai — benchmark report</span>
+                <span className="ml-3 text-xs text-text-muted font-mono">modelblitz.com — benchmark report</span>
               </div>
               <video
                 src="/demo.mp4"
@@ -472,7 +472,7 @@ export default function App() {
         <div className="mx-auto max-w-[1200px] px-4 py-8 md:px-6">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div className="text-sm text-text-muted">
-              <span className="font-semibold text-text-secondary"><span className="text-ember">Model</span>Pick</span> © 2026
+              <span className="font-semibold text-text-secondary"><span className="text-ember">Model</span>Blitz</span> © 2026
             </div>
             <div className="flex items-center gap-6 text-sm text-text-muted">
               <a href="#" className="hover:text-text-secondary transition-colors">Privacy</a>
